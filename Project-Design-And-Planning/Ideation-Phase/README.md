@@ -2,3 +2,4 @@
 - [Problem Statement](./Problem-Statement.pdf)
 - [Literature Survey](./Literature-Survey.pdf)
 - [Empathy Map](./Empathy-Map)
+- [Ideation](./Ideation)
