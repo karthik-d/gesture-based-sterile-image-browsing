@@ -6,10 +6,10 @@
 
 ### Team Members
 
-- Team Leader - 195001047 - Karthik D
-- Team Member 1 - 195001015 - A Anirudh
-- Team Member 2 - 195001069 - Nestor Ingarshal J
-- Team Member 3 - 195001306 - Pugalarasu K
+- Team Leader: Karthik D (195001047) 
+- Team Member 1: A Anirudh (195001015) 
+- Team Member 2: Nestor Ingarshal J (195001069) 
+- Team Member 3: Pugalarasu K (195001306)
 
 ### Mentors
 
