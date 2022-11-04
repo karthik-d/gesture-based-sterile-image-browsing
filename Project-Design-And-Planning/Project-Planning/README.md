@@ -1,2 +1,3 @@
 ## The following documents are present in this folder:
-- [Customer Journey](./Project-Planning.pdf)
+- [Project Planning](./Project-Planning.pdf)
+- [Jira Files Folder](./Jira-Files/)
