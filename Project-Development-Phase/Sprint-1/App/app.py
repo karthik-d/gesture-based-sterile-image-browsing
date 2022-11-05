@@ -1,6 +1,6 @@
 from flask import Flask, render_template, url_for, flash, redirect, session, logging, request
 from wtforms import Form, StringField, TextAreaField, PasswordField, validators
-from passlib.hash import sha256_crypt
+import database
 
 app = Flask(__name__)
 
@@ -23,22 +23,29 @@ class RegisterForm(Form):
 def register():
     form = RegisterForm(request.form)
     if request.method == "POST" and form.validate():
-        return render_template('registration.html', form=form) #change    
-    
-    elif request.method == "GET":
-        return render_template('registration.html', form=form)
+        form_name = form.name.data
+        form_email = form.email.data
+        form_username = form.username.data
+        form_password = form.password.data
+
+        res = database.users_insert(form_name, form_username, form_email, form_password)
+
+        flash('You are now registered and can login!', 'success')
+#        return render_template('registration.html', form=form) #change    
+
+    return render_template('registration.html', form=form)
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
         return render_template('login.html') #change
     
-    elif request.method == "GET":
-        return render_template('login.html')
+    return render_template('login.html')
         
 @app.route('/landing')
 def landingpage():
-    return render_template('landing-page.html')
+    return render_template('landingpage.html')
 
 if __name__ == "__main__":
+    app.secret_key="secret123"
     app.run(debug=True)

@@ -10,6 +10,7 @@
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
     {% from "registration_form_helper.html" import render_field %}
+    {% include "message_flash.html" %}
     <div class="container" style="width: 80%; margin-top: 30px;" >
     <div class="card">
         <div class="card-header text-center" style="font-weight: bold;">
@@ -38,9 +39,16 @@
             <div class="card-footer text-center">
                 <p><input type="submit" value="Submit" class="btn btn-primary" style="margin-top: 20px;"></p>
             </div>
-
         </form>
     </div>
+    <div class="card" style="padding-top: 20px;">
+        <div class="card-body text-center">
+          <p>Existing User?
+            <a href="{{url_for('login')}}">Login Here!</a>
+          </p>
+
+        </div>
+      </div>
     </div>    
 </body>
 </html>
