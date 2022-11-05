@@ -36,5 +36,9 @@ def login():
     elif request.method == "GET":
         return render_template('login.html')
         
+@app.route('/landing')
+def landingpage():
+    return render_template('landing-page.html')
+
 if __name__ == "__main__":
     app.run(debug=True)
