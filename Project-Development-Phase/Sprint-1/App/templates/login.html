@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <title>A Gesture Based Tool for Sterile Browsing of Radiology Images</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
+    
+    <div class="container-fluid" style="width: 80%; margin-top: 30px;">
+        <div class="card text-center" >
+            <div class="card-header">
+              <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" href="{{url_for('login')}}">Sign In</a>
+                  </li>  
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('register')}}">Sign Up</a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Sign In to your Account</h5>
+
+              <form method="post" action="">
+                <div class="form-group" style="padding: 10px;">
+                    <label>Username</label>
+                    <input type="text" name="username" class="form-control" value="{{request.form.username}}">
+                </div>
+                <div class="form-group" style="padding: 10px;">
+                    <label>Password</label>
+                    <input type="password" name="password" class="form-control" value="{{request.form.password}}">
+                </div>
+            </form>
+
+              <a href="#" class="btn btn-primary" style="margin-top: 20px;">Submit</a>
+            </div>
+          </div>        
+    </div>    
+</body>
+</html>
