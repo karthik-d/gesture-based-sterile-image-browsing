@@ -1,4 +1,6 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, flash, redirect, session, logging, request
+from wtforms import Form, StringField, TextAreaField, PasswordField, validators
+from passlib.hash import sha256_crypt
 
 app = Flask(__name__)
 
@@ -7,13 +9,28 @@ app = Flask(__name__)
 def about():
     return render_template('about.html')
 
-@app.route("/register")
+class RegisterForm(Form):
+    name = StringField('Name', [validators.Length(min=1, max=50)])
+    username = StringField('Username', [validators.Length(min=4, max=25)])
+    email = StringField('Email', [validators.Length(min=6, max=50)])
+    password = PasswordField('Password', [
+        validators.DataRequired(),
+        validators.EqualTo('confirm', message='Passwords do not match')
+    ])
+    confirm = PasswordField('Confirm Password')
+
+@app.route("/register", methods=["GET", "POST"])
 def register():
-    return render_template('registration.html')
+    form = RegisterForm(request.form)
+    if request.method == "POST" and form.validate():
+        return render_template('registration.html', form=form)        
+    
+    return render_template('registration.html', form=form)
 
 @app.route("/login")
 def login():
     return render_template('login.html')
+
 
 if __name__ == "__main__":
     app.run(debug=True)

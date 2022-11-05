@@ -11,9 +11,10 @@
 
 <body style="overflow-x: hidden;">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
+
     <nav class="navbar bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#" style="color:white">
+          <a class="navbar-brand" href="https://smartinternz.com/guided-project/a-gesture-based-tool-for-sterile-browsing-of-radiology-images-cnn-and-open-cv" target="_blank" style="color:white">
             <img src="{{url_for('static', filename='tool-icon.png')}}" alt="Logo" width="23" height="24" class="d-inline-block align-text-top">
             IBM Naliya Thiran - PNT2022TMID53060
         </a>
@@ -53,7 +54,7 @@
             <div class="card-body">
               <h5 class="card-title">Sign Up</h5>
               <p class="card-text">Don't have an account? Sign up below!</p>
-              <a href="#" class="btn btn-primary">Sign Up</a>
+              <a class="btn btn-primary" href="{{url_for('register')}}">Sign Up</a>
             </div>
           </div>
         </div>
@@ -62,7 +63,7 @@
             <div class="card-body">
               <h5 class="card-title">Sign In</h5>
               <p class="card-text">Existing User? Sign in here!</p>
-              <a href="#" class="btn btn-primary">Sign in</a>
+              <a class="btn btn-primary" href="{{url_for('login')}}">Sign in</a>
             </div>
           </div>
         </div>
