@@ -16,10 +16,19 @@
           <a class="navbar-brand" href="#" style="color:white">
             <img src="{{url_for('static', filename='tool-icon.png')}}" alt="Logo" width="23" height="24" class="d-inline-block align-text-top">
             IBM Naliya Thiran - PNT2022TMID53060
-          </a>
-        </div>
-      </nav>  
-    <div class="container-fluid text-center" style="margin: 50px;">
+        </a>
+        <ul class="nav nav-pills">
+         <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading1" style="color:white" >Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading2" style="color:white">Sign In</a>
+          </li> 
+        </ul>
+    </div>
+    </nav>  
+    
+    <div class="container-fluid text-center" style="margin: 40px;">
         <div class="jumbotron text-center">
             <h1>A Gesture Based Tool for Sterile Browsing of Radiology Images</h1>
         </div>
@@ -39,7 +48,7 @@
 
     <div class="d-flex justify-content-center" style="margin: 20px;">
     <div class="row"  style="width: 50%;">
-        <div class="col-sm-6">
+        <div class="col-sm-6" id="scrollspyHeading1">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Sign Up</h5>
@@ -48,7 +57,7 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-6" id="scrollspyHeading2">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Sign In</h5>
