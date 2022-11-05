@@ -23,14 +23,18 @@ class RegisterForm(Form):
 def register():
     form = RegisterForm(request.form)
     if request.method == "POST" and form.validate():
-        return render_template('registration.html', form=form)        
+        return render_template('registration.html', form=form) #change    
     
-    return render_template('registration.html', form=form)
+    elif request.method == "GET":
+        return render_template('registration.html', form=form)
 
-@app.route("/login")
+@app.route("/login", methods=["GET", "POST"])
 def login():
-    return render_template('login.html')
-
-
+    if request.method == "POST":
+        return render_template('login.html') #change
+    
+    elif request.method == "GET":
+        return render_template('login.html')
+        
 if __name__ == "__main__":
     app.run(debug=True)
