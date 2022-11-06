@@ -2,3 +2,4 @@
 - [Customer Journey](./Customer-Journey.pdf)
 - [Solution Requirements](./Solution-Requirements.pdf)
 - [Technology Stack](./Technology-Stack.pdf)
+- [DFD](./Data-Flow-Diagrams-and-User-Stories.pdf)
