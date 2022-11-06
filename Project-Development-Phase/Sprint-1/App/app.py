@@ -1,5 +1,6 @@
 from flask import Flask, render_template, url_for, flash, redirect, session, logging, request
 from wtforms import Form, StringField, TextAreaField, PasswordField, validators
+from datetime import datetime
 import database
 
 app = Flask(__name__)
@@ -51,8 +52,15 @@ def login():
                 error = 'Invalid login!'
                 return render_template('login.html', error=error)
             
+            database.usession_insert(email)
+            user_sessions = database.usession_fetch_by_email(email)
+            print(user_sessions)
+
             session['logged_in'] = True
             session['username'] = result_set['username']    
+            session['number_of_access'] = len(user_sessions)
+            session['last'] =  user_sessions[-1]
+            
             return render_template('landingpage.html')
              
 
