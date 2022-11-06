@@ -9,6 +9,10 @@ app = Flask(__name__)
 def about():
     return render_template('about.html')
 
+@app.route('/landing')
+def landingpage():
+    return render_template('landingpage.html')
+
 class RegisterForm(Form):
     name = StringField('Name', [validators.Length(min=1, max=50)])
     username = StringField('Username', [validators.Length(min=4, max=25)])
@@ -47,7 +51,10 @@ def login():
                 error = 'Invalid login!'
                 return render_template('login.html', error=error)
             
+            session['logged_in'] = True
+            session['username'] = result_set['username']    
             return render_template('landingpage.html')
+             
 
         else:
             error = 'User not found! Please enter the correct username and/or password.'
@@ -55,9 +62,12 @@ def login():
     
     return render_template('login.html')
         
-@app.route('/landing')
-def landingpage():
-    return render_template('landingpage.html')
+@app.route('/signout')
+def signout():
+    session.clear()
+    flash('You are now logged out', 'success')
+    return redirect(url_for('login'))
+
 
 if __name__ == "__main__":
     app.secret_key="secret123"
