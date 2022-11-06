@@ -8,10 +8,10 @@
 </head>
 
 <body>
+    {% include 'message_flash.html' %}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
-    
-    <div class="container-fluid" style="width: 80%; margin-top: 30px;">
-        <div class="card text-center" >
+    <div class="container-fluid" style="width: 80%; margin-top: 30px;">  
+      <div class="card text-center" >
             <div class="card-header">
               <ul class="nav nav-tabs card-header-tabs">
                 <li class="nav-item">
@@ -25,18 +25,17 @@
             <div class="card-body">
               <h5 class="card-title">Sign In to your Account</h5>
 
-              <form method="post" action="">
+              <form class="form-group" method="post" action="">
                 <div class="form-group" style="padding: 10px;">
-                    <label>Username</label>
-                    <input type="text" name="username" class="form-control" value="{{request.form.username}}">
+                    <label>Email</label>
+                    <input type="text" name="email" class="form-control" value="{{request.form.email}}">
                 </div>
                 <div class="form-group" style="padding: 10px;">
                     <label>Password</label>
                     <input type="password" name="password" class="form-control" value="{{request.form.password}}">
                 </div>
-            </form>
-
-              <a href="#" class="btn btn-primary" style="margin-top: 20px;">Submit</a>
+                <p><input type="submit" value="Submit" class="btn btn-primary" style="margin-top: 20px;"></p>
+              </form>
             </div>
           </div>        
     </div>    

@@ -31,5 +31,11 @@ def users_insert(name, username, email, password):
     res = ibm_db.execute(stmt, params)
     return res
 
-def users_fetch():
-    pass
+def users_fetch_by_email(email):
+    conn = connect_db()
+    sql = "SELECT \"name\", \"password\", \"username\" FROM USERS WHERE \"email\" = ?"
+    stmt = ibm_db.prepare(conn, sql)
+    ibm_db.bind_param(stmt, 1, email)
+    ibm_db.execute(stmt)
+    result_set =ibm_db.fetch_assoc(stmt)
+    return result_set   

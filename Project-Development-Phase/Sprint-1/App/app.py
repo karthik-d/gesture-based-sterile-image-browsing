@@ -31,14 +31,27 @@ def register():
         res = database.users_insert(form_name, form_username, form_email, form_password)
 
         flash('You are now registered and can login!', 'success')
-#        return render_template('registration.html', form=form) #change    
 
     return render_template('registration.html', form=form)
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        return render_template('login.html') #change
+        email = request.form["email"]
+        candidate_password = request.form["password"]
+        #print("Email is", email)
+        result_set = database.users_fetch_by_email(email)
+
+        if type(result_set) != type(False):
+            if result_set['password'] != candidate_password:
+                error = 'Invalid login!'
+                return render_template('login.html', error=error)
+            
+            return render_template('landingpage.html')
+
+        else:
+            error = 'User not found! Please enter the correct username and/or password.'
+            return render_template('login.html', error=error)
     
     return render_template('login.html')
         
