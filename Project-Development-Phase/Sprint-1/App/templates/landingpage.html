@@ -21,7 +21,7 @@
                                 <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Gesture Prediction</span> </a>
                         </li>
                         <li>
-                            <a href="{{url_for('about')}}" class="nav-link px-0 align-middle">
+                            <a href="{{url_for('signout')}}" class="nav-link px-0 align-middle">
                                 <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Sign Out</span> </a>
                         </li>
         
@@ -35,9 +35,16 @@
                     </div>
                 </div>
             </div>
-            <div class="col py-3">
-                <h3>Welcome!</h3>
-                <p class="lead"></p>
+            <div class="col py-3" style="margin-top: 20px;">
+                <div class="card">
+                    <h5 class="card-header">Welcome!</h5>
+                    <div class="card-body">
+                      <h5 class="card-title">Hi <small>{{session.username}}</small>! Weclome back to the application!</h5>
+                      <p class="card-text">Number of accesses to the application(All Time): <small>{{session.number_of_access}}</small></p>
+                      <p class="card-text">Last Session: <small>{{session.last}}</small></p>
+                      <a href="#" class="btn btn-primary">Get to know how to use the application</a>
+                    </div>
+                  </div>
             </div>
         </div>
     </div>
