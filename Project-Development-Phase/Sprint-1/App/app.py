@@ -1,9 +1,20 @@
 from flask import Flask, render_template, url_for, flash, redirect, session, logging, request
 from wtforms import Form, StringField, TextAreaField, PasswordField, validators
+from flask_mail import Mail, Message
+import os
 from datetime import datetime
 import database
 
 app = Flask(__name__)
+mail = Mail(app)
+
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USERNAME'] = 'XXX'
+app.config['MAIL_PASSWORD'] = 'XXX'
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
+mail = Mail(app)
 
 @app.route("/")
 @app.route("/about")
@@ -36,6 +47,10 @@ def register():
         res = database.users_insert(form_name, form_username, form_email, form_password)
 
         flash('You are now registered and can login!', 'success')
+        msg = Message('Registration Verfication', sender="anirudh19015@cse.ssn.edu.in", recipients=[form_email])
+        msg.body = (f'Congratulations! Welcome user! Your Credentials are Username: {form_username} Password: {form_password}')
+        mail.send(msg)
+        print("Email Sent!")
 
     return render_template('registration.html', form=form)
 
