@@ -10,20 +10,12 @@ mail = Mail(app)
 
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'anirudh19015@cse.ssn.edu.in'
-app.config['MAIL_PASSWORD'] = '123Washington!!'
+app.config['MAIL_USERNAME'] = 'XXX'
+app.config['MAIL_PASSWORD'] = 'XXX'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
 
-@app.route("/")
-@app.route("/about")
-def about():
-    return render_template('about.html')
-
-@app.route('/landing')
-def landingpage():
-    return render_template('landingpage.html')
 
 class RegisterForm(Form):
     name = StringField('Name', [validators.Length(min=1, max=50)])
@@ -34,6 +26,23 @@ class RegisterForm(Form):
         validators.EqualTo('confirm', message='Passwords do not match')
     ])
     confirm = PasswordField('Confirm Password')
+
+@app.route("/")
+@app.route("/about")
+def about():
+    return render_template('about.html')
+
+@app.route('/landing')
+def landingpage():
+    return render_template('landingpage.html')
+
+@app.route('/help')
+def help():
+    return render_template('help.html')
+
+@app.route('/predict')
+def predict():
+    return render_template('prediction.html')
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -91,14 +100,6 @@ def signout():
     session.clear()
     flash('You are now logged out', 'success')
     return redirect(url_for('login'))
-
-@app.route('/help')
-def help():
-    return render_template('help.html')
-
-@app.route('/predict')
-def predict():
-    return render_template('prediction.html')
 
 if __name__ == "__main__":
     app.secret_key="secret123"
