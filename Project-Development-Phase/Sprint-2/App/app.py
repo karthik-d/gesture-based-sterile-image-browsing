@@ -96,6 +96,10 @@ def signout():
 def help():
     return render_template('help.html')
 
+@app.route('/predict')
+def predict():
+    return render_template('prediction.html')
+
 if __name__ == "__main__":
     app.secret_key="secret123"
     app.run(debug=True)

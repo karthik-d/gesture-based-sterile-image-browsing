@@ -1,10 +1,10 @@
 # IBM-Project-21974-1659800381
 
-**Project Title:** A Gesture-based Tool for Sterile Browsing of Radiology
+**Project Title:** A Gesture-based Tool for Sterile Browsing of Radiology Images
 
 **Technology Bucket:** Artificial Intelligence 
 
-### Team Members
+### Team
 
 - Team Leader: Karthik D (195001047) 
 - Team Member 1: A Anirudh (195001015) 
