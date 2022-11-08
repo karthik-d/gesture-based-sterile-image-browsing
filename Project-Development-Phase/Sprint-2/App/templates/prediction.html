@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <title>A Gesture Based Tool for Sterile Browsing of Radiology Images</title>
+</head>
+<body style="overflow-x: hidden;">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>    
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding: 10px">
+        <a class="navbar-brand">{{session.username}}'s Account</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for('landingpage')}}">Home</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('help')}}">Help</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    <div class="card mx-auto" style="width: 80%; margin-top: 10%;">
+        <form class="form-group" action="predict" method="post" enctype="multipart/form-data">
+                <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <b>Step I: Access Webcam</b>
+                    <p>Click the checkbox below to enable the application to access your camera.
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="checked" name="video" id="video">Allow this application to access my camera
+                          </div>
+                    </p>
+                </li>
+                <li class="list-group-item">
+                    <b>Step II: Upload Image</b>
+                    <p>Upload an image from your computer to the application by clicking on the `Choose File` buttom below.</p>
+                    <input type="file" class="form-control" id="userfile" name="userfile" style="margin-top: 10px; margin-bottom: 10px; width: 30%;"/>
+                </li>
+                <li class="list-group-item mx-auto"><p><input type="submit" value="Predict!" class="btn btn-primary" style="margin-top: 20px;"></p></li>
+                </ul>
+        </form>
+    </div>
+</body>
+</html>

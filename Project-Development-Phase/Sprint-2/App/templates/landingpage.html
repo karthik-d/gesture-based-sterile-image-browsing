@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <title>A Gesture Based Tool for Sterile Browsing of Radiology Images</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <a class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline">Menu</span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                        <li>
+                            <a href="{{url_for('help')}}" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Help</span> </a>
+                        </li>
+                        <li>
+                            <a href="{{url_for('predict')}}" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Gesture Prediction</span> </a>
+                        </li>
+                        <li>
+                            <a href="{{url_for('signout')}}" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Sign Out</span> </a>
+                        </li>
+        
+                    </ul>
+                    <hr>
+                    <div class="dropdown pb-4">
+                        <a class="d-flex align-items-center text-white text-decoration-none" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="{{url_for('static', filename='user-photo.jpg')}}" alt="user photo" width="30" height="30" class="rounded-circle">
+                            <span class="d-none d-sm-inline mx-1">{{session.name}}</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col py-3" style="margin-top: 20px;">
+                <div class="card">
+                    <h5 class="card-header">Welcome!</h5>
+                    <div class="card-body">
+                      <h5 class="card-title">Hi <small>{{session.username}}</small>! Weclome back to the application!</h5>
+                      <p class="card-text">Number of accesses to the application(All Time): <small>{{session.number_of_access}}</small></p>
+                      <p class="card-text">Latest Session: <small>{{session.last}}</small></p>
+                      <a href="{{url_for('help')}}" class="btn btn-primary">Get to know how to use the application</a>
+                    </div>
+                  </div>
+                  <img src="{{url_for('static', filename='technical-architecture.jpg')}}" class="rounded mx-auto d-block" style="padding-top: 60px;">
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
