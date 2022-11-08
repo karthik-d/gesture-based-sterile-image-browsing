@@ -3,6 +3,7 @@ from wtforms import Form, StringField, TextAreaField, PasswordField, validators
 from flask_mail import Mail, Message
 import os
 import cv2
+from time import sleep
 import numpy as np
 from tensorflow.keras.models import load_model
 from werkzeug.utils import secure_filename
@@ -11,7 +12,7 @@ import database
 
 app = Flask(__name__)
 mail = Mail(app)
-model = load_model('../Model/new-gesture.h5')
+model = load_model('../Model/gesture.h5')
 print("Model Loaded!")
 
 results = {0: "Zero", 1: "One", 2: "Two", 3:"Three", 4:"Four", 5: "Five"}
@@ -60,15 +61,28 @@ def help():
 def predict():
 
     if request.method == "POST":
-        file = request.files['userfile']
-        basepath = os.path.dirname(__file__)
-        file_path = os.path.join(basepath,'uploads',secure_filename(file.filename))
-        file.save(file_path)
-        print('Image saved successfully!')
+        #print("Video vals: ", request.form.get("video"))
+        
+        if request.form.get("video") is not None:
+            cap = cv2.VideoCapture(0)
+            while True:
+                ret, frame = cap.read()
+                cv2.imshow('Video', frame)
+                if cv2.waitKey(1) & 0xFF == ord('q'):
+                    break  
+            cap.release()
+            cv2.destroyAllWindows()
+        
+        else:
+            file = request.files['userfile']
+            basepath = os.path.dirname(__file__)
+            file_path = os.path.join(basepath,'uploads',secure_filename(file.filename))
+            file.save(file_path)
+            print('Image saved successfully!')
 
-        predictions = model_predict(file_path)
-        print(predictions)
-        session['prediction'] = results[np.argmax(predictions)]
+            predictions = model_predict(file_path)
+            print(predictions)
+            session['prediction'] = results[np.argmax(predictions)]
 
     return render_template('prediction.html')
 
