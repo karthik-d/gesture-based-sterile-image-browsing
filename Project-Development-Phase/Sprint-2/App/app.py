@@ -2,11 +2,19 @@ from flask import Flask, render_template, url_for, flash, redirect, session, log
 from wtforms import Form, StringField, TextAreaField, PasswordField, validators
 from flask_mail import Mail, Message
 import os
+import cv2
+import numpy as np
+from tensorflow.keras.models import load_model
+from werkzeug.utils import secure_filename
 from datetime import datetime
 import database
 
 app = Flask(__name__)
 mail = Mail(app)
+model = load_model('../Model/new-gesture.h5')
+print("Model Loaded!")
+
+results = {0: "Zero", 1: "One", 2: "Two", 3:"Three", 4:"Four", 5: "Five"}
 
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
@@ -27,6 +35,14 @@ class RegisterForm(Form):
     ])
     confirm = PasswordField('Confirm Password')
 
+def model_predict(file_path):
+        input_image = cv2.imread(file_path, cv2.IMREAD_GRAYSCALE)
+        input_image = cv2.resize(input_image, (64,64))
+        #print(input_image, input_image.shape)
+        predictions = model.predict(input_image.reshape(1,64,64,1))
+        return predictions
+
+
 @app.route("/")
 @app.route("/about")
 def about():
@@ -40,9 +56,22 @@ def landingpage():
 def help():
     return render_template('help.html')
 
-@app.route('/predict')
+@app.route('/predict', methods=["GET", "POST"])
 def predict():
+
+    if request.method == "POST":
+        file = request.files['userfile']
+        basepath = os.path.dirname(__file__)
+        file_path = os.path.join(basepath,'uploads',secure_filename(file.filename))
+        file.save(file_path)
+        print('Image saved successfully!')
+
+        predictions = model_predict(file_path)
+        print(predictions)
+        session['prediction'] = results[np.argmax(predictions)]
+
     return render_template('prediction.html')
+
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
