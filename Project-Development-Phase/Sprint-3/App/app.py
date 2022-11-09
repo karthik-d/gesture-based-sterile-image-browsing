@@ -71,6 +71,16 @@ def changepass():
 def predict():
 
     if request.method == "POST":
+        
+        if request.form.get("video") is None:
+            error = "Please enable camera access!"
+            return render_template('prediction.html', error=error)
+
+        if  request.files["userfile"].filename == "":
+            error = "Please upload an image!"
+            return render_template('prediction.html', error=error)
+
+
         file = request.files['userfile']
         basepath = os.path.dirname(__file__)
         file_path = os.path.join(basepath,'uploads',secure_filename(file.filename))
@@ -168,7 +178,6 @@ def predict():
                    
             cap.release()
             cv2.destroyAllWindows()                
-
 
     return render_template('prediction.html')
 
