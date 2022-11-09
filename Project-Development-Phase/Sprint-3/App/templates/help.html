@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <title>A Gesture Based Tool for Sterile Browsing of Radiology Images</title>
+</head>
+<body style="overflow-x: hidden;">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>   
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding: 10px">
+        <a class="navbar-brand">{{session.username}}'s Account</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for('landingpage')}}">Home</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('predict')}}">Gesture Prediction</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    <div class="row justify-content-center" style="margin-top: 20px;">
+      <div class="card" style="width: 80%;">
+          <img class="card-img-top mx-auto" src="{{url_for('static', filename='access-webcam.jpg')}}" alt="Card image cap" style="max-width: 40%; height: auto; padding-top: 10px;">
+          <div class="card-body">
+          <h5 class="card-title">Step I</h5>
+          <p class="card-text">First, as a user, you must grant permission to the application for accessing your webcam. The application uses this video stream from the webcam to capture and map hand gestures.</p>
+          </div>
+      </div>
+  </div>
+
+    <div class="row justify-content-center" style="margin-top: 20px;">
+        <div class="card" style="width: 80%;">
+            <img class="card-img-top mx-auto" src="{{url_for('static', filename='upload-image.png')}}" alt="Card image cap" style="padding-top: 10px; max-width: 40%; height: auto; ">
+            <div class="card-body">
+            <h5 class="card-title">Step II</h5>
+            <p class="card-text">Next, you must upload an image to the application. You can do so by clicking on the upload image icon under the gesture prediction tab. This is the image that will be modified according to the various hand gestures.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center" style="margin-top: 20px; margin-bottom: 20px;">
+        <div class="card" style="width: 80%;">
+            <img class="card-img-top mx-auto" src="{{url_for('static', filename='gestures.png')}}" alt="Card image cap" style="max-width: 40%; height: auto; padding-top: 10px;">
+            <div class="card-body">
+            <h5 class="card-title">Step III</h5>
+            <p class="card-text">Finally, you can run the machine learning model for gesture recognition! All you need to do is to click on the `Predict` button on the page.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center">
+    <a id="back-to-top" href="#" class="btn btn-dark btn-lg back-to-top" role="button" style="margin-bottom: 20px;">Scroll to Top</a>
+    </div>
+
+</body>
+</html>

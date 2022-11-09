@@ -35,7 +35,6 @@ class RegisterForm(Form):
     ])
     confirm = PasswordField('Confirm Password')
 
-
 @app.route("/")
 @app.route("/about")
 def about():
@@ -113,7 +112,7 @@ def predict():
                 elif prediction[0][0]=='One':
                 
                     resized = cv2.resize(image1, (200, 200))
-                    cv2.imshow("Fixed Resizing", resized)
+                    cv2.imshow("Gesture 1 - Fixed Resizing I(200,200)", resized)
                     key=cv2.waitKey(3000)
                     if (key & 0xFF) == ord("1"):
                         cv2.destroyWindow("Gesture 1 - Fixed Resizing I(200,200)")
@@ -124,14 +123,14 @@ def predict():
                     center = (w // 2, h // 2)
                     M = cv2.getRotationMatrix2D(center, -45, 1.0)
                     rotated = cv2.warpAffine(image1, M, (w, h))
-                    cv2.imshow("OpenCV Rotation", rotated)
+                    cv2.imshow("Gesture 2 - OpenCV Rotation", rotated)
                     key=cv2.waitKey(3000)
                     if (key & 0xFF) == ord("2"):
                         cv2.destroyWindow("Gesture 2 - OpenCV Rotation")
                     
                 elif prediction[0][0]=='Three':
                     blurred = cv2.GaussianBlur(image1, (21, 21), 0)
-                    cv2.imshow("Blurred", blurred)
+                    cv2.imshow("Gesture 3 - Blurring", blurred)
                     key=cv2.waitKey(3000)
                     if (key & 0xFF) == ord("3"):
                         cv2.destroyWindow("Gesture 3 - Blurring")
@@ -139,14 +138,14 @@ def predict():
                 elif prediction[0][0]=='Four':
                 
                     resized = cv2.resize(image1, (400, 400))
-                    cv2.imshow("Fixed Resizing", resized)
+                    cv2.imshow("Gesture 4 - Fixed Resizing II(400,400)", resized)
                     key=cv2.waitKey(3000)
                     if (key & 0xFF) == ord("4"):
                         cv2.destroyWindow("Gesture 4 - Fixed Resizing II(400,400)")
 
                 elif prediction[0][0]=='Five':
                     gray = cv2.cvtColor(image1, cv2.COLOR_RGB2GRAY)
-                    cv2.imshow("OpenCV Gray Scale", gray)
+                    cv2.imshow("Gesture 5 - Grayscaling", gray)
                     key=cv2.waitKey(3000)
                     if (key & 0xFF) == ord("5"):
                         cv2.destroyWindow("Gesture 5 - Grayscaling")
