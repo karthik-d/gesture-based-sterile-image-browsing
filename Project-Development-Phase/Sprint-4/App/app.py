@@ -191,6 +191,11 @@ def register():
         form_username = form.username.data
         form_password = form.password.data
 
+        email_check = database.check_email_exists(form_email)
+        if email_check == True:
+            error = 'The email you entered already exists in the database!'
+            return render_template('registration.html', error=error, form=form)
+        
         res = database.users_insert(form_name, form_username, form_email, form_password)
 
         flash('You are now registered and can login!', 'success')

@@ -73,3 +73,14 @@ def update_password(email, password):
     ibm_db.bind_param(stmt, 2, email)
     res = ibm_db.execute(stmt)
     return res
+
+def check_email_exists(email):
+    conn = connect_db()
+    sql = "SELECT * FROM USERS where \"email\" = ?"
+    stmt = ibm_db.prepare(conn, sql)
+    ibm_db.bind_param(stmt, 1, email)
+    ibm_db.execute(stmt)
+    if ibm_db.fetch_row(stmt) == False:
+        return False
+    else:
+        return True    
