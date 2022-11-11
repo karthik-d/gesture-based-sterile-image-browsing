@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <title>A Gesture Based Tool for Sterile Browsing of Radiology Images</title>
 </head>
-<body style="overflow-x: hidden;">
+<body style="overflow-x: hidden; background-color: #e3e6e4;">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>    
     {% include "message_flash.html" %}
 
@@ -30,7 +30,7 @@
 
     <div class="card mx-auto" style="width: 80%; margin-top: 10%;">
         <form class="form-group" action="predict" method="post" enctype="multipart/form-data">
-                <ul class="list-group list-group-flush">
+                <ul class="list-group">
                 <li class="list-group-item">
                     <b>Step I: Access Webcam</b>
                     <p>Click the checkbox below to enable the application to access your camera.
