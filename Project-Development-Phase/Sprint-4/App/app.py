@@ -48,7 +48,7 @@ class ChangePasswordForm(Form):
 def about():
     return render_template('about.html')
 
-@app.route('/landing')
+@app.route('/landingpage')
 def landingpage():
     return render_template('landingpage.html')
 
@@ -230,7 +230,7 @@ def login():
             session['number_of_access'] = len(user_sessions)
             session['last'] =  user_sessions[-1]
             
-            return render_template('landingpage.html')
+            return redirect(url_for('landingpage'))
              
 
         else:
