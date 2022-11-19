@@ -1,6 +1,8 @@
 
 # A Gesture-based Tool for Sterile Browsing of Radiology Images
 
+This project aims to build a hands-free digital image browsing system for use in a sterile setting in a medical environment.
+
 ## Quick Links
 
 - [Project Repository](https://github.com/IBM-EPBL/IBM-Project-21974-1659800381)
@@ -45,3 +47,5 @@ To eliminate the need for such an assistant, and to make the manipulation operat
 ### Implemented System
 
 In practicality, the system's machine learning backend may be trained to recognize any number of gestures. For this proof-of-concept project, we implement 6 different gestures, and map them to specific operations on a medical image. The entire system is deployed on a web-server, with user-management, real-time gesture capturing, recognition and change effecting using peripherals commonly found on a typical personal computer: web-camera, LCD display and trackpad/mouse. 
+
+![proposed-solution-overview](./Project-Design-And-Planning/Project-Design-Phase-2/assets/Data-Flow-Overview.png)
