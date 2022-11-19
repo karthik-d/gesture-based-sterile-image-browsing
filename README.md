@@ -53,20 +53,18 @@ To eliminate the need for such an assistant, and to make the manipulation operat
 
 In practicality, the system's machine learning backend may be trained to recognize any number of gestures. For this proof-of-concept project, we implement 6 different gestures, and map them to specific operations on a medical image. The entire system is deployed on a web-server, with user-management, real-time gesture capturing, recognition and change effecting using peripherals commonly found on a typical personal computer: web-camera, LCD display and trackpad/mouse. 
 
-![proposed-workflow](./Project-Design-And-Planning/Project-Design-Phase-1/assets/solution-architecture.png)
-
 ### Gesture-Action Mapping
 
 The following operations are mapped to each gesture in the proof-of-concept implementation,
 
 | Gesture Image   | Gesture Name | Action |
 | :-----------: | :-----------: | :------: |
-| Team Leader | Zero | Annotate the image with a rectangle | 
-| Team Member 1 | One | Resize the image to resolution (200, 200) |
-| Team Member 2 | Two | Rotate the image | 
-| Team Member 3 | Three  | Blur the image |
-| Team Member 1 | Four | Resize the image to resolution (400, 400) |
-| Team Member 3 | Five  | Convert the image to grayscale |
+| ![gesture-0](./Project-Development-Phase/Dataset/test/0/0.jpg) | Zero | Annotate the image with a rectangle | 
+| ![gesture-1](./Project-Development-Phase/Dataset/test/1/0.jpg) | One | Resize the image to resolution (200, 200) |
+| ![gesture-2](./Project-Development-Phase/Dataset/test/2/0.jpg) | Two | Rotate the image | 
+| ![gesture-3](./Project-Development-Phase/Dataset/test/3/0.jpg) | Three  | Blur the image |
+| ![gesture-4](./Project-Development-Phase/Dataset/test/4/0.jpg) | Four | Resize the image to resolution (400, 400) |
+| ![gesture-5](./Project-Development-Phase/Dataset/test/5/0.jpg) | Five  | Convert the image to grayscale |
 
 
 ### Technology Stack
