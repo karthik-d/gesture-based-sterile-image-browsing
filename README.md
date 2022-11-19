@@ -44,8 +44,10 @@ Surgeons and doctors often require reference imaging results whilst operating on
 
 To eliminate the need for such an assistant, and to make the manipulation operations more granular and completely in control of the surgeon/doctor, our system proposes to use gestures as the instruction media. The getures are captured through a camera attached to the viewing system; the digital frames are processed to recognize the gesture using deep learning; each gesture is mapped to a corresponding transformations on the image; and the transformation is effected on the image. This makes for a hands-free sterility-preserving view manipulation mechanism.
 
+![data-flow-overview](./Project-Design-And-Planning/Project-Design-Phase-2/assets/Data-Flow-Overview.png)
+
 ### Implemented System
 
 In practicality, the system's machine learning backend may be trained to recognize any number of gestures. For this proof-of-concept project, we implement 6 different gestures, and map them to specific operations on a medical image. The entire system is deployed on a web-server, with user-management, real-time gesture capturing, recognition and change effecting using peripherals commonly found on a typical personal computer: web-camera, LCD display and trackpad/mouse. 
 
-![proposed-solution-overview](./Project-Design-And-Planning/Project-Design-Phase-2/assets/Data-Flow-Overview.png)
+![proposed-workflow](./Project-Design-And-Planning/Project-Design-Phase-1/assets/solution-architecture.png)
