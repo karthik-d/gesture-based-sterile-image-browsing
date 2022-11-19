@@ -73,9 +73,10 @@ The following operations are mapped to each gesture in the proof-of-concept impl
 | Team Member 2 | Nestor Ingarshal J | 195001069 | 
 | Team Member 3 | Pugalarasu K  | 195001306 |
 
-## Mentors
+## Mentors and Evaluators
 
 | Role | Name |
 | :-----------: | :------: |
-| Industry Mentor | Ms. Pradeepthi |
-| Faculty Mentor | Lakshmi Priya S |
+| Academic Mentor | [Dr. Lakshmi Priya S](https://www.ssn.edu.in/staff-members/s-lakshmi-priya/) |
+| Academic Evaluator | [Dr. Kanchana R](https://www.ssn.edu.in/staff-members/dr-r-kanchana/) |
+| Industry Mentor and Evaluator | Ms. Pradeepthi |
