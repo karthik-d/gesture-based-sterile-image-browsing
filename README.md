@@ -39,14 +39,6 @@ This project aims to build a hands-free digital image browsing system for use in
 - Web Development
 - IBM Cloud Database
 
-### Technology Stack
-
-- Tensforflow/Keras
-- OpenCV
-- NumPy
-- Flask
-- NodeRED
-
 ### Motivation
 
 Surgeons and doctors often require reference imaging results whilst operating on patients. Furthermore, they may need to manipulate the image view through basic tranformative operations such as panning, scaling, and rotation among others. However, in doing so, computer peripheral devices need to be accessed through touch. To avoid compromising the sterility of their instruments and operating hand, they presently instruct surgical assistants to operate the viewing media to adjust it to their requirement. The granularity in reaching their required state of the view is limited to the effectiveneess of the verbal communication, and can often take several attempts beefore reaching the required state. 
@@ -62,3 +54,12 @@ To eliminate the need for such an assistant, and to make the manipulation operat
 In practicality, the system's machine learning backend may be trained to recognize any number of gestures. For this proof-of-concept project, we implement 6 different gestures, and map them to specific operations on a medical image. The entire system is deployed on a web-server, with user-management, real-time gesture capturing, recognition and change effecting using peripherals commonly found on a typical personal computer: web-camera, LCD display and trackpad/mouse. 
 
 ![proposed-workflow](./Project-Design-And-Planning/Project-Design-Phase-1/assets/solution-architecture.png)
+
+
+### Technology Stack
+
+- Tensforflow/Keras
+- OpenCV
+- NumPy
+- Flask
+- NodeRED
