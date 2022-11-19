@@ -15,7 +15,7 @@ This project aims to build a hands-free digital image browsing system for use in
 
 ## Project Description
 
-### Technology Used
+### Technology Applied
 
 - Artificial Intelligence
 - Deep Learning
