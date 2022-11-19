@@ -3,6 +3,8 @@
 
 This project aims to build a hands-free digital image browsing system for use in a sterile setting in a medical environment.
 
+> This project was evaluated on an incremental basis at multiple stages by an **Academic Mentor** from [SSN College of Engineering, Chennai, India](https://www.ssn.edu.in/college-of-engineering/computer-science-and-engineering-department-ssn-institutions/), and an **Industry Mentor** from [IBM](https://careereducation.smartinternz.com/), as part of an Innovation, Employability and Entrepreneurship program for students.
+
 ![proposed-workflow](./Project-Design-And-Planning/Project-Design-Phase-1/assets/solution-architecture.png)
 
 ## Quick Links
@@ -19,7 +21,7 @@ This project aims to build a hands-free digital image browsing system for use in
 - Deep Learning
 - Image Processing
 - Web Development
-- IBM Cloud Database
+- Cloud Database
 
 ### Motivation
 
