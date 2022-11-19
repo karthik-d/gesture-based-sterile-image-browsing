@@ -1,12 +1,12 @@
 
 # A Gesture-based Tool for Sterile Browsing of Radiology Images
 
-[**Project Repository**: IBM-Project-21974-1659800381](https://github.com/IBM-EPBL/IBM-Project-21974-1659800381)
+## Quick Links
 
-**Technology Bucket:** Artificial Intelligence 
+- [**Project Repository**](https://github.com/IBM-EPBL/IBM-Project-21974-1659800381)
+- [**Video Demonstration Link**](https://drive.google.com/file/d/1wd168Ld-yCibywBhVcPSvzHZc-tcosIM/view?usp=sharing)
 
-**Video Demonstration Link:** [Link](https://drive.google.com/file/d/1wd168Ld-yCibywBhVcPSvzHZc-tcosIM/view?usp=sharing)
-### Team
+## Team
 
 | Role     | Name | Register Number |
 | :-----------: | :-----------: | :------: |
@@ -15,7 +15,7 @@
 | Team Member 2 | Nestor Ingarshal J | 195001069 | 
 | Team Member 3 | Pugalarasu K  | 195001306 |
 
-### Mentors
+## Mentors
 
 | Role | Name |
 | :-----------: | :------: |
