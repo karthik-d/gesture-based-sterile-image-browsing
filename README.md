@@ -26,3 +26,9 @@
 | :-----------: | :------: |
 | Industry Mentor | Ms. Pradeepthi |
 | Faculty Mentor | Lakshmi Priya S |
+
+## Project Description
+
+This project aims to build a hands-free digital image browsing system for use in a sterile setting in a medical environment.
+
+Surgeons and doctors often require reference imaging results whilst operating on patients. Furthermore, they may need to manipulate the image view through basic tranformative operations such as panning, scaling, and rotation among others. However, in doing so, computer peripheral devices need to be accessed through touch. To avoid compromising the sterility of their instruments and operating hand, they presently instruct surgical assistants to operate the viewing media to adjust it to their requirement. The granularity in reacing their required state of the view is limited to the effectiveneess of the verbal communication, and can often take severla attempts beefore reaching the requird state. 
