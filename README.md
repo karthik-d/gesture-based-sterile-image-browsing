@@ -25,7 +25,7 @@ This project aims to build a hands-free digital image browsing system for use in
 
 ### Motivation
 
-Surgeons and doctors often require reference imaging results whilst operating on patients. Furthermore, they may need to manipulate the image view through basic tranformative operations such as panning, scaling, and rotation among others. However, in doing so, computer peripheral devices need to be accessed through touch. To avoid compromising the sterility of their instruments and operating hand, they presently instruct surgical assistants to operate the viewing media to adjust it to their requirement. The granularity in reaching their required state of the view is limited to the effectiveneess of the verbal communication, and can often take several attempts beefore reaching the required state. 
+Surgeons and doctors often require reference imaging results whilst operating on patients. Furthermore, they may need to manipulate the image view through basic tranformative operations such as panning, scaling, and rotation among others. However, in doing so, computer peripheral devices need to be accessed through touch. To avoid compromising the sterility of their instruments and operating hand, they presently instruct surgical assistants to operate the viewing media to adjust it to their requirement. The granularity in reaching their required state of view is limited to the effectiveness of the verbal communication, and can often take several attempts before reaching the required state. 
 
 ### Proposed Solution
 
