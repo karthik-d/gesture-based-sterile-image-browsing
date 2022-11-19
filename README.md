@@ -74,7 +74,7 @@ The following operations are mapped to each gesture in the proof-of-concept impl
 
 ## Mentors and Evaluators
 
-This project was evaluated on an incremental basis at multiple stages by an **Academic Mentor** from [SSN College of Engineering, Chennai, India](https://www.ssn.edu.in/college-of-engineering/computer-science-and-engineering-department-ssn-institutions/), and an **Industry Mentor** from [IBM](https://careereducation.smartinternz.com/), as part of an Innovation, Employability and Entrepreneurship program for students.
+This project was evaluated on an incremental basis at multiple stages by **Academic Experts** from [SSN College of Engineering, Chennai, India](https://www.ssn.edu.in/college-of-engineering/computer-science-and-engineering-department-ssn-institutions/), and an **Industry Experts** from [IBM](https://careereducation.smartinternz.com/), as part of an Innovation, Employability and Entrepreneurship program for students.
 
 | Role | Name |
 | :-----------: | :------: |
