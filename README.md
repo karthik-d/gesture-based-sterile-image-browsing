@@ -67,8 +67,8 @@ The following operations are mapped to each gesture in the proof-of-concept impl
 
 | Role     | Name | Register Number |
 | :-----------: | :-----------: | :------: |
-| Team Leader | Karthik D | 195001047 | 
-| Team Member 1 | A Anirudh | 195001015 |
+| Team Leader | [Karthik D](https://github.com/karthik-d) | 195001047 | 
+| Team Member 1 | [A Anirudh](https://github.com/AAnirudh07) | 195001015 |
 | Team Member 2 | Nestor Ingarshal J | 195001069 | 
 | Team Member 3 | Pugalarasu K  | 195001306 |
 
