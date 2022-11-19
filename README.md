@@ -35,6 +35,17 @@ This project aims to build a hands-free digital image browsing system for use in
 
 - Artificial Intelligence
 - Deep Learning
+- Image Processing
+- Web Development
+- IBM Cloud Database
+
+### Technology Stack
+
+- Tensforflow/Keras
+- OpenCV
+- NumPy
+- Flask
+- NodeRED
 
 ### Motivation
 
