@@ -55,6 +55,19 @@ In practicality, the system's machine learning backend may be trained to recogni
 
 ![proposed-workflow](./Project-Design-And-Planning/Project-Design-Phase-1/assets/solution-architecture.png)
 
+### Gesture-Action Mapping
+
+The following operations are mapped to each gesture in the proof-of-concept implementation,
+
+| Gesture Image   | Gesture Name | Action |
+| :-----------: | :-----------: | :------: |
+| Team Leader | Zero | Annotate the image with a rectangle | 
+| Team Member 1 | One | Resize the image to resolution (200, 200) |
+| Team Member 2 | Two | Rotate the image | 
+| Team Member 3 | Three  | Blur the image |
+| Team Member 1 | Four | Resize the image to resolution (400, 400) |
+| Team Member 3 | Five  | Convert the image to grayscale |
+
 
 ### Technology Stack
 
