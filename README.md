@@ -29,6 +29,17 @@
 
 ## Project Description
 
+### Technology Used
+
+- Artificial Intelligence
+- Deep Learning
+
+### Motivation and Proposed Solution
+
 This project aims to build a hands-free digital image browsing system for use in a sterile setting in a medical environment.
 
-Surgeons and doctors often require reference imaging results whilst operating on patients. Furthermore, they may need to manipulate the image view through basic tranformative operations such as panning, scaling, and rotation among others. However, in doing so, computer peripheral devices need to be accessed through touch. To avoid compromising the sterility of their instruments and operating hand, they presently instruct surgical assistants to operate the viewing media to adjust it to their requirement. The granularity in reacing their required state of the view is limited to the effectiveneess of the verbal communication, and can often take severla attempts beefore reaching the requird state. 
+Surgeons and doctors often require reference imaging results whilst operating on patients. Furthermore, they may need to manipulate the image view through basic tranformative operations such as panning, scaling, and rotation among others. However, in doing so, computer peripheral devices need to be accessed through touch. To avoid compromising the sterility of their instruments and operating hand, they presently instruct surgical assistants to operate the viewing media to adjust it to their requirement. The granularity in reaching their required state of the view is limited to the effectiveneess of the verbal communication, and can often take several attempts beefore reaching the required state. 
+
+To eliminate the need for such an assistant, and to make the manipulation operations more granular and completely in control of the surgeon/doctor, our system proposes to use gestures as the instruction media. The getures are captured through a camera attached to the viewing system; the digital frames are processed to recognize the gesture using deep learning; each gesture is mapped to a corresponding transformations on the image; and the transformation is effected on the image. This makes for a hands-free sterility-preserving view manipulation mechanism.
+
+In practicality, the system may be trained to recognize any number of gestures. For this proof-of-concept project, we implement 6 different gestures, and map them to specific operations. The entire system is depl
