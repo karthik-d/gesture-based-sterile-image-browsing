@@ -4,6 +4,7 @@
 
 **Technology Bucket:** Artificial Intelligence 
 
+**Video Demonstration Link:** https://drive.google.com/file/d/1wd168Ld-yCibywBhVcPSvzHZc-tcosIM/view?usp=sharing
 ### Team
 
 - Team Leader: Karthik D (195001047) 
