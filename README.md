@@ -10,7 +10,7 @@ This project aims to build a hands-free digital image browsing system for use in
 ## Quick Links
 
 - [Project Repository](https://github.com/IBM-EPBL/IBM-Project-21974-1659800381)
-- [Project Demonstration Video](https://drive.google.com/file/d/1wd168Ld-yCibywBhVcPSvzHZc-tcosIM/view?usp=sharing)
+- [Project Demonstration Video](https://drive.google.com/file/d/1ZVg7bqdMY6afFfRHukROtoy74wmqAJZp/view?usp=share_link)
 - [Project Report](./Final-Deliverables/Project-Report_PNT2022TMID53060.pdf)
 
 ## Project Description
